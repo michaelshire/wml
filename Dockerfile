@@ -7,7 +7,11 @@ RUN yum install wget -y
 # RUN yum install wget -y && yum clean all -y
 # RUN wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 
-# Install python3 for AZ CLI and ansible
+# Install python3
+RUN yum install -y epel-release
+RUN yum install -y python36 python36-pip
+# RUN yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
+
 # RUN yum install -y python3 python3-virtualenv python3-pip
 
 #RUN yum install iputils -y
