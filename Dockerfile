@@ -8,6 +8,7 @@ ENV HOME=/tmp/
 # RUN wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 
 # Install python3
+RUN yum install -y epel-release
 RUN yum install -y https://repo.ius.io/ius-release-el7.rpm
 RUN yum install -y python36u python36u-pip
 
