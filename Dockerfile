@@ -2,7 +2,17 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/python-38
 ADD ./init.sh ./
 
 ENV HOME=/tmp/
-RUN yum list "python*"
+RUN INSTALL_PKGS="rh-python38 rh-python38-python-devel rh-python38-python-setuptools rh-python38-python-pip nss_wrapper \
+        httpd24 httpd24-httpd-devel httpd24-mod_ssl httpd24-mod_auth_kerb httpd24-mod_ldap \
+        httpd24-mod_session atlas-devel gcc-gfortran libffi-devel libtool-ltdl enchant" && \
+    yum install -y yum-utils && \
+    prepare-yum-repositories rhel-server-rhscl-7-rpms && \
+    yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
+    rpm -V $INSTALL_PKGS && \
+    # Remove redhat-logos (httpd dependency) to keep image size smaller.
+    rpm -e --nodeps redhat-logos && \
+    yum -y clean all --enablerepo='*'
+
 RUN python3 --version
 
 #RUN yum install iputils -y
