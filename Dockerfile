@@ -8,7 +8,7 @@ RUN yum install wget -y
 # RUN wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 
 # Install python3 for AZ CLI and ansible
-RUN yum install -y python3 python3-virtualenv python3-pip
+# RUN yum install -y python3 python3-virtualenv python3-pip
 
 #RUN yum install iputils -y
 RUN yum install nmap-ncat -y
