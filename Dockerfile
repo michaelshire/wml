@@ -1,13 +1,6 @@
-FROM image-registry.openshift-image-registry.svc:5000/openshift/python-38
+FROM centos/python-36-centos7
 ADD ./init.sh ./
 
-ENV PYTHON_VERSION=3.8 \
-    PATH=$HOME/.local/bin/:$PATH \
-    PYTHONUNBUFFERED=1 \
-    PYTHONIOENCODING=UTF-8 \
-    LC_ALL=en_US.UTF-8 \
-    LANG=en_US.UTF-8 \
-    PIP_NO_CACHE_DIR=off
 RUN python3 --version
 
 #RUN yum install iputils -y
