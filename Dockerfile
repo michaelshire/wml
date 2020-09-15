@@ -8,9 +8,8 @@ ENV HOME=/tmp/
 # RUN wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
 
 # Install python3
-RUN yum install -y epel-release
-RUN yum install -y https://repo.ius.io/ius-release-el7.rpm
-RUN yum install -y python36u python36u-pip
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm
+RUN yum install -y python36
 
 # RUN yum install -y python3 python3-virtualenv python3-pip
 
