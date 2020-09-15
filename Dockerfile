@@ -2,7 +2,7 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/python-38
 ADD ./init.sh ./
 
 ENV HOME=/tmp/
-RUN yum list "python3*"
+RUN yum list "python*"
 RUN python3 --version
 
 #RUN yum install iputils -y
