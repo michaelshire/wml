@@ -1,4 +1,4 @@
-FROM image-registry.openshift-image-registry.svc:5000/openshift/ubi
+FROM image-registry.openshift-image-registry.svc:5000/openshift/python-36-rhel7
 ADD ./init.sh ./
 
 ENV HOME=/tmp/
@@ -6,11 +6,6 @@ ENV HOME=/tmp/
 # RUN yum install wget -y
 # RUN yum install wget -y && yum clean all -y
 # RUN wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip
-
-# Install python3
-RUN yum install -y https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm
-RUN yum install -y epel-release
-RUN yum install -y python36
 
 # RUN yum install -y python3 python3-virtualenv python3-pip
 
