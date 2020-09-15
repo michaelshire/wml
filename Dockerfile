@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi8
+FROM image-registry.openshift-image-registry.svc:5000/mlserver/ubi8
 ADD ./init.sh ./
 
 ENV HOME=/tmp/
