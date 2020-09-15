@@ -1,10 +1,10 @@
-FROM image-registry.openshift-image-registry.svc:5000/openshift/python-38
+FROM centos/python-36-centos7
 ADD ./init.sh ./
 
 RUN python3 --version
 
 #RUN yum install iputils -y
-RUN sudo yum install nmap-ncat -y
+RUN yum install nmap-ncat -y
 #RUN yum install net-tools -y
 #RUN yum install bind-utils -y
 #RUN yum install mod_ssl -y
