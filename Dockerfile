@@ -48,7 +48,7 @@ RUN yum install nmap-ncat -y
 # Choose a package name and obtain verbose version information
 #RUN rpm -qi microsoft-mlserver-packages-r-9.4.7
 
-RUN chown 1001:1001 init.sh && chmod o+w init.sh
+RUN chown 1001:1001 init.sh && chmod 755 init.sh
 RUN ls -al init.sh
 USER 1001
 
