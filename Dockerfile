@@ -2,6 +2,7 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/python-36-rhel7
 ADD ./init.sh ./
 
 ENV HOME=/tmp/
+RUN python3 --version
 
 #RUN yum install iputils -y
 RUN yum install nmap-ncat -y
