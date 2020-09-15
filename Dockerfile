@@ -32,12 +32,12 @@ RUN rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-pro
 RUN ls -la /etc/yum.repos.d/
 
 # Update packages on your system:
-RUN yum update
+RUN yum update -y
 
 # Install the server
 # The following command is for version 7.x
 # For 6.x: yum install microsoft-mlserver-el6-9.4.7
-RUN yum install microsoft-mlserver-all-9.4.7
+RUN yum install microsoft-mlserver-all-9.4.7 -y
 
 # Activate the server
 RUN /opt/microsoft/mlserver/9.4.7/bin/R/activate.sh
