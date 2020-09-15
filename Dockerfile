@@ -4,7 +4,7 @@ ADD ./init.sh ./
 RUN python3 --version
 
 #RUN yum install iputils -y
-RUN yum install nmap-ncat -y
+# RUN yum install nmap-ncat -y
 #RUN yum install net-tools -y
 #RUN yum install bind-utils -y
 #RUN yum install mod_ssl -y
