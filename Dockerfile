@@ -9,8 +9,9 @@ RUN yum install wget -y
 
 # Install python3
 RUN yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
+RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 RUN yum install -y epel-release
-RUN yum list "python3*"
+RUN yum list "python36*"
 RUN yum install -y python36-rpm.x86_64
 # RUN yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
 
