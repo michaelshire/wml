@@ -1,4 +1,4 @@
-FROM centos/python-36-centos7
+FROM image-registry.openshift-image-registry.svc:5000/openshift/python-38
 ADD ./init.sh ./
 
 RUN python3 --version
