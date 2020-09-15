@@ -26,7 +26,7 @@ RUN sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.micros
 # Set the location of the package repo at the "prod" directory
 # The following command is for version 7.x
 # For 6.x, replace 7 with 6 to get that version
-RUN rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+RUN rpm -Uvh https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm
 
 # Verify that the "microsoft-prod.repo" configuration file exists
 RUN ls -la /etc/yum.repos.d/
